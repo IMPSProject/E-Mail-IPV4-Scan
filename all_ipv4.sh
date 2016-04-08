@@ -6,7 +6,7 @@ for i in `seq 0 256`; do
 				whois $i.$j.$k.$l | grep 'e-mail' | awk '{print $1}' >> global.txt
 			done
 			sort global.txt -u -o global.txt
-			"E-mails: "cat global.txt | wc -l
+			echo "E-mails: " `cat global.txt | wc -l`
 		done
 	done
 done
