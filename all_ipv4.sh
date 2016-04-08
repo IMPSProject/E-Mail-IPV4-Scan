@@ -1,7 +1,7 @@
 #!/bin/bash
 exiting(){
 	tput clear
-	echo -e "${BOLD}Exiting..${NC}"
+	echo -e `tput bold`"Exiting.."`tput sgr0 && tput setab 9`
 	sort global.txt -u -o global.txt
 	echo "E-mails: " `cat global.txt | wc -l`
 	exit 1
